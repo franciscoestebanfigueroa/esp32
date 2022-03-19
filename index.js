@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require('path');
+
+
 const x= require('dotenv').config();
 
 const app = express();
@@ -14,9 +16,11 @@ require('./sockets/socket.js');
 //ver carpeta socket
 server.listen(process.env.PORT,(err)=>{ //antes era app.listene..
 if(err) throw new Error (err);
-console.log('server ok perfecto con nodemon cc',process.env.PORT)
+console.log('server ok perfecto con Node.Js',process.env.PORT)
 
 });
+
+
 
 
 
