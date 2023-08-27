@@ -29,6 +29,10 @@
             console.table(data);
         });
 
+        cliente.on('puerto',function(data){
+            console.log('estado del puerto',data);
+        });
+        cliente.emit('estado-puerto',{data});
 
     </script>
 </body>

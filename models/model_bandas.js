@@ -12,5 +12,17 @@ class Banda{
 
 }
 
+class puertos{
+   constructor(name='puerto sin nombre'){
+      this.name=name;
+      this.estado=0;
+      this.id=v4();
+   }
+
+}
+
+
+
 module.exports = Banda;
+module.exports = puertos;
 
