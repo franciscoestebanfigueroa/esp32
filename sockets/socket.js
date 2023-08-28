@@ -18,6 +18,9 @@ io.on('connection', client => {
     console.log('cliente conectado info socket');
     client.on('disconnect', () => { console.log('desconectado...socket ')});
   
+
+      client.on('esp32',(payload)=>{console.log("escucho de esp32")});
+          
       client.on('estado-puerto',(payload)=>{
         console.log('estado del puerto 2 ',payload);
         client.emit('estado-puerto',(payload)=>{
@@ -29,10 +32,8 @@ io.on('connection', client => {
       client.on('mensajex', (payload) => { 
       console.log('escucho data en server',payload);
       client.broadcast.emit('mensajex',payload); 
-      client.on('esp32', (payload) => { 
-        console.log('escucho data en server',payload);
-        client.broadcast.emit('mensajex',payload); 
-          
+
+      
     });
     client.emit('puerto',puerto2);
  
