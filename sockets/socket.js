@@ -29,6 +29,9 @@ io.on('connection', client => {
       client.on('mensajex', (payload) => { 
       console.log('escucho data en server',payload);
       client.broadcast.emit('mensajex',payload); 
+      client.on('esp32', (payload) => { 
+        console.log('escucho data en server',payload);
+        client.broadcast.emit('mensajex',payload); 
           
     });
     client.emit('puerto',puerto2);
