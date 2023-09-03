@@ -44,7 +44,8 @@ io.on('connection', client => {
       
       client.on('votacion',function(payload){
         console.log(payload['id']);
-        listaBandas.votar(payload['id']);
+        //listaBandas.votar(payload['id']);
+        listaBandas.votar(payload[0]);
         io.emit('datos',listaBandas);
       });
       
